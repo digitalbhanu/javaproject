@@ -36,7 +36,12 @@ public class UpdateTest {
 			if(con!=null)
 				st=con.createStatement();
 			//sqlQuer
-			String Query="update emp set sal=sal+(sal*"+percentage+"/100) from emp where job in('"+job1+"','"+job2+"')";
+			
+			
+//			UPDATE EMP SET SAL =SAL+(SAL*10.0/100) WHERE JOB IN('CLERK','MANAGER')
+
+			//UPDATE EMP SET SAL =SAL+(SAL*10/100) WHERE JOB IN('CLERK','ANALYST');
+			String Query="UPDATE EMP SET SAL =SAL+(SAL*"+percentage+"/100) WHERE JOB IN('"+job1+"','"+job2+"')";
 			System.out.println(Query);
 			//send and execute the sqlquery
 			boolean flag=false;
